@@ -1,20 +1,15 @@
 /* ===================== DEBUT GOOGLE FONTS ======================================================*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
 /* DEBUT ROOT*/
 :root {
   /*--------COLOR--------------------------*/
   --color0:#fff;
-  --color1:#eeecec;
+  --color1:#efefef;
   --color2:#d4d4d4;
   --color3:#adadad;
-  --color4:#000;
-  --color5:#2F1817;
-  --colorTheme: #2a292e;
-  --color6:#dadce0;
-  --color7:#202124;
-  --color8:#404040;
+  --color4:#f7f7f7;
+  --color5:#000;
+  --color6:#404040;
   /*--------FONT AND TYPOGRAPHY---------------------------*/
   --title-font:"Roboto", sans-serif;
   --body-font: "Roboto", sans-serif;
@@ -37,9 +32,10 @@
   /*--------MARGIN BOTTOM---------------------------*/
   --mb-30:0.9375rem;
   --mb-40:1.25rem;
-  --mb-50:1.5625rem;
-  --mb-60:1.875rem;
-  --mb-100:3.125rem;
+  --mb-50:3.125rem;
+  --mb-60:3.75rem;
+  --mb-70:4.375rem;
+  --mb-100:6.25rem;
 }
 @media (min-width: 768px) {
   :root {
@@ -75,7 +71,7 @@ h1 {
   font-size: var(--h1-font-size-Mobile);
   font-weight: var(--font-normal);
   margin-bottom: 0.5rem;
-  color: var(--color4);
+  color: var(--color5);
   text-align: left;
 }
 
@@ -84,7 +80,7 @@ h2 {
   font-weight: var(--font-regular);
   margin-bottom: 2rem;
   font-size: var(--h2-font-size);
-  color: #adadad;
+  color: var(--color3);
 }
 
 h3 {
@@ -96,7 +92,7 @@ h3 {
 
 p {
   font-family: var(--body-font);
-  color: var(--color4);
+  color: var(--color5);
   font-weight: var(--font-light);
   font-size: var(--normal-plus);
   line-height: 1.6rem;
@@ -125,8 +121,8 @@ main {
 .button {
   font-family: var(--title-font);
   display: inline-block;
-  background-color: var(--color4);
-  color: var(--color0);
+  background-color: var(--color5);
+  color: var(--color5);
   padding: 0.5rem 2rem;
   font-weight: var(--font-medium);
   font-size: var(--small-font-size);
@@ -134,60 +130,53 @@ main {
 }
 
 .button:hover {
-  background-color: var(--color8);
+  background-color: var(--color6);
 }
 
 .buttonBack {
-  background-color: var(--color4);
-  border: 1px solid var(--color4);
+  background-color: var(--color5);
+  border: 1px solid var(--color5);
   color: var(--color0);
 }
 
 .buttonBack:hover {
-  background-color: --color8;
+  background-color: --color6;
   color: var(--color0);
   font-weight: var(--font-semi-bold);
-  border: 1px solid var(--color8);
-}
-
-.buttonThemeBody {
-  background-color: var(--colorTheme);
-  font-weight: var(--font-semi-bold);
-  color: var(--color0);
-}
-
-.buttonThemeBody:hover {
-  background-color: var(--color0);
-  border: 1px solid var(--colorTheme);
-  color: var(--colorTheme);
+  border: 1px solid var(--color6);
 }
 
 /*===================== DEBUT MAIN_HEADER ==========================================*/
-.header {
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--color2);
-}
-
 .main_header {
   text-align: left;
   margin-bottom: 4rem;
 }
 
 /*===================== FIN MAIN_HEADER ==========================================*/
-/*===================== DEBUT ACHETER==========================================*/
+/*===================== DEBUT INTRODUCTION==========================================*/
 .main__body .introduction {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: var(--mb-100);
+}
+
+.introduction_img {
+  margin-bottom: var(--mb-50);
+}
+
+.introduction_img--un {
+  margin-bottom: var(--mb-50);
+}
+
+.introduction_img--deux {
+  margin-bottom: var(--mb-50);
 }
 
 .main__body .introduction_texte {
   width: 100%;
-  margin-top: var(--mb-100);
-  margin-bottom: var(--mb-100);
-  text-align: justify;
+  margin-bottom: var(--mb-60);
+  text-align: left;
 }
 
 .main__body .introduction_button {
@@ -199,7 +188,7 @@ main {
   width: 100%;
   display: flex;
   font-size: 11px;
-  margin: 2rem 0;
+  margin: 0rem 0;
 }
 
 .main__body .introduction_infos h3 {
@@ -239,25 +228,25 @@ main {
   margin-bottom: 0rem;
 }
 
-/*------------- DEBUT BOARD ----------------------------------------------------*/
-.main__body .board .img_board--un {
-  margin-top: var(--mb-100);
-}
-.main__body .board .img_board--deux {
+/*===================== FIN INTRODUCTION=======================================================*/
+/*===================== DEBUT BOARD =======================================================*/
+.main__body .board .board_img--un {
   padding-top: var(--mb-100);
   margin-bottom: var(--mb-100);
 }
-.main__body .board .img_board--trois {
+.main__body .board .board_img--deux {
+  margin-bottom: var(--mb-100);
+}
+.main__body .board .board_img--trois {
   margin-bottom: var(--mb-100);
 }
 
-/*------------- FIN BOARD ----------------------------------------------------*/
-/*===================== FIN ACHETER=======================================================*/
+/*===================== FIN BOARD =======================================================*/
 .scrollup {
   position: fixed;
   right: 1rem;
   bottom: -20%;
-  background-color: var(--color4);
+  background-color: var(--color5);
   padding: 0.35rem 0.5rem;
   border-radius: 0rem;
   z-index: var(--z-tooltip);
@@ -266,7 +255,7 @@ main {
 }
 
 .scrollup:hover {
-  background-color: var(--color8);
+  background-color: var(--color6);
 }
 
 .scrollup__icon {
@@ -281,7 +270,7 @@ main {
 /*===================== DEBUT FOOTER ==========================================*/
 footer {
   width: 100%;
-  border-bottom: 1px solid var(--color0);
+  border-bottom: 1px solid var(--color5);
   border-top: 1px solid #efefef;
 }
 
@@ -294,7 +283,7 @@ footer {
 }
 
 .footer__inner p {
-  color: var(--color4);
+  color: var(--color5);
   padding: 0 0.625rem;
   font-weight: var(--font-normal);
   font-family: var(--body-font);
@@ -302,7 +291,7 @@ footer {
 }
 
 /*===================== FIN FOOTER ==========================================*/
-/*===================== DEBUT RESPONSIVE ==========================================*/
+/*===================== DEBUT RESPONSIVE ====================================================================================*/
 @media (min-width: 768px) {
   h1 {
     font-size: var(--h1-font-size);
@@ -367,13 +356,6 @@ footer {
     padding: 0 5rem;
   }
 
-  p {
-    font-family: var(--body-font);
-    color: var(--color4);
-    font-weight: var(--font-light);
-    font-size: var(--normal-plus);
-  }
-
   .main__body .introduction_texte {
     padding-right: 10rem;
   }
@@ -398,5 +380,6 @@ footer {
     font-size: var(--normal-font-size);
   }
 }
+/*===================== FIN RESPONSIVE ====================================================================================*/
 
 /*# sourceMappingURL=style.css.map */

@@ -8,8 +8,8 @@
 
 /* ===================== DEBUT GOOGLE FONTS ======================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap');
 
 
@@ -23,16 +23,26 @@
 /*--------COLOR--------------------------*/   
 
 
+// --color0:#fff;
+// --color1:#eeecec;
+// --color2:#d4d4d4;
+// --color3:#adadad;
+// --color4:#000; //text-color
+// --color5:#2F1817;
+// --colorTheme: #2a292e;
+// --color6:#dadce0;
+// --color7:#202124;
+// --color8:#404040;
+
 --color0:#fff;
---color1:#eeecec;
+--color1:#efefef;
 --color2:#d4d4d4;
 --color3:#adadad;
---color4:#000; //text-color
---color5:#2F1817;
---colorTheme: #2a292e;
---color6:#dadce0;
---color7:#202124;
---color8:#404040;
+--color4:#f7f7f7;
+// $color4:#8E8E8E;
+--color5:#000; 
+--color6:#404040;
+
 
 
 
@@ -75,9 +85,10 @@
 /*--------MARGIN BOTTOM---------------------------*/
 --mb-30:0.9375rem;
 --mb-40:1.25rem;
---mb-50:1.5625rem;
---mb-60:1.875rem;
---mb-100:3.125rem;
+--mb-50:3.125rem;
+--mb-60:3.75rem;
+--mb-70:4.375rem;
+--mb-100:6.25rem;
 
 @include md{
     --mb-30:1.875rem;
@@ -107,20 +118,12 @@ html {
     scroll-behavior: smooth;
 }
 
-
-// body {
-//     // font-family: var(--body-font);
-//     // color: var(--color2);
-// }
-
-
-
 h1{
     font-family: var(--title-font);
     font-size: var(--h1-font-size-Mobile);
     font-weight: var(--font-normal);
     margin-bottom: .5rem;
-    color: var(--color4);
+    color: var(--color5);
     text-align: left;
 }
 
@@ -130,7 +133,7 @@ h2{
     font-weight: var(--font-regular);
     margin-bottom: 2rem;
     font-size: var(--h2-font-size);
-    color: #adadad;
+    color: var(--color3);
 }
 
 h3{
@@ -138,31 +141,26 @@ h3{
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: 0rem;
-    // color: var(--color4);
-    // text-align: center;
 }
-
 
 
 p{
     font-family: var(--body-font);
-    color:var(--color4);
+    color:var(--color5);
     font-weight: var(--font-light);
     font-size: var(--normal-plus);
     line-height: 1.6rem;
 }
 
 
-
-
 ul {
     list-style: none;
 }
 
+
 a{
     text-decoration: none;
 }
-
 
 
 img {
@@ -175,7 +173,6 @@ main{
     width: 100%;
     display: block;
     margin: 4.6875rem auto 0;
-    // padding: 0 5%;
     padding: 0 2rem;
 }
 
@@ -183,78 +180,41 @@ main{
 
 
 
-//------------BUTTONS
+//---------------------------------DEBUT BUTTONS-----------------------------------//
 
 //----- DEBUT BUTTON 1 DE BASE -----------------------//
 .button {
     font-family: var(--title-font);
     display: inline-block;
-    background-color:var(--color4);
-    color: var(--color0);
-    // margin-top: var(--mb-30) ;
-    // padding: .8rem 3rem;
+    background-color:var(--color5);
+    color: var(--color5);
     padding: .5rem 2rem;
     font-weight: var(--font-medium);
     font-size: var(--small-font-size);
     transition: .3s;
 }
 .button:hover {
-    background-color: var(--color8);
+    background-color: var(--color6);
 }
 //----- FINBUTTON 1 DE BASE -----------------------//
 
 
 //----- DEBUT BUTTON THEME HEADER -----------------------//
 .buttonBack{
-    background-color: var(--color4);
-    border: 1px solid var(--color4);
+    background-color: var(--color5);
+    border: 1px solid var(--color5);
     color:var(--color0);
 }
 .buttonBack:hover {
-    background-color:--color8;
+    background-color:--color6;
     color:var(--color0);
     font-weight:var(--font-semi-bold);
-    border: 1px solid var(--color8);
+    border: 1px solid var(--color6);
 }
 //----- FIN BUTTON THEME HEADER -----------------------//
 
 
-
-//----- DEBUT BUTTON THEME BODY -----------------------//
-// .buttonThemeBody{
-//     background-color: var(--color0);
-//     color:var(--colorTheme);
-//     border: 1px solid var(--colorTheme);
-// }
-// .buttonThemeBody:hover {
-//     background-color:var(--colorTheme);
-//     color: var(--color0);
-//     font-weight:var(--font-semi-bold);
-
-// }
-
-.buttonThemeBody{
-    background-color:var(--colorTheme);
-    font-weight:var(--font-semi-bold);
-    color: var(--color0);
-
-}
-.buttonThemeBody:hover {
-    background-color: var(--color0);
-    border: 1px solid var(--colorTheme);
-    color:var(--colorTheme);
-
-
-}
-//----- FIN BUTTON THEME BODY -----------------------//
-
-
-
-// .wrapper{
-//     width: 100%;
-//     position: relative;
-// }
-//===================== FINBASE - RESET HTML ==========================================//
+//===================== FIN BASE - RESET HTML ==========================================//
 
 
 
@@ -264,112 +224,91 @@ main{
 
 
 
-//------------ DEBUT VERSEION RESPONSIVE DE BASE > S MOBILE FIRST ( > 414px)---------------------------------------//
+//------------ DEBUT VERSION MOBILE FIRST ( > 414px)------------------------------------------------------------------//
+
 
 /*===================== DEBUT MAIN_HEADER ==========================================*/
-.header{
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color:var(--color2);
-}
-
 .main_header{
-    // border: 1px solid red;
     text-align: left;
     margin-bottom: 4rem;
-    // padding: 0 5rem 5rem;
-    // background-color: var(--colorTheme);
 }
-
 /*===================== FIN MAIN_HEADER ==========================================*/
 
 
 
+/*===================== DEBUT INTRODUCTION==========================================*/
 
-
-/*===================== DEBUT ACHETER==========================================*/
-
-
-//----- DEBUT INTRO --------------------------------------------//
+//----- DEBUT INTRODUCTION UN ---------------------------------------//
 .main__body .introduction{
-// border: 1px solid black;
-display: flex;
-flex-wrap: wrap;
-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: var(--mb-100);
 }
+
+
+.introduction_img{
+    margin-bottom: var(--mb-50);
+}
+.introduction_img--un{
+    margin-bottom: var(--mb-50);
+}
+.introduction_img--deux{
+    margin-bottom: var(--mb-50);
+}
+
 
 .main__body .introduction_texte{
-    // border: 1px solid blue;
     width: 100%;
-    margin-top: var(--mb-100);
-    margin-bottom: var(--mb-100);
-    text-align: justify;
+    margin-bottom: var(--mb-60);
+    text-align: left;
 }
-
 .main__body .introduction_button{
     text-align: left;
     margin-top: 20px;
 }
 
 
-
-
 .main__body .introduction_infos{
-    // border: 1px solid red;
     width: 100%;
     display: flex;
-    // width: 40%;
     font-size: 11px;
-    margin: 2rem 0;
-    // color: pink;
+    margin: 0rem 0;
 }
 .main__body .introduction_infos h3{
     font-size: 13px;
-    // color: pink;
     margin-bottom: .2rem;
 }
 .main__body .introduction_infos p{
     font-size: 13px;
-    // color: pink;
 }
 
 
 .main__body .introduction_infos--gauche{
-    // border: 1px solid yellow;
     width: 50%;
 }
 .gauche_item{
-    // border: 1px solid red;
     margin-bottom: 1.2rem;
 }
 .gauche_item:last-child{
     margin-bottom: 0rem;
 }
 .main__body .introduction_infos--gauche p, .main__body .introduction_infos--droite p{
-// color: orange;
 line-height: 1.3rem;
 }
 
 
 .main__body .introduction_infos--droite{
-    // border: 1px solid purple;
     width: 50%;
-    // padding-left: 1rem;
 }
 .droite_item{
-    // border: 1px solid red;
     margin-bottom: 1.2rem;
 }
 .droite_item:last-child{
     margin-bottom: 0rem;
 }
 
-
-// .main__body.introduction_infos--gauche, .main__body.introduction_infos--droite{
-//     display: block;
-//     width: 50%;
-// }
+/*===================== FIN INTRODUCTION=======================================================*/
 
 
 
@@ -378,59 +317,22 @@ line-height: 1.3rem;
 
 
 
-//----- FIN INTRO --------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-/*------------- DEBUT BOARD ----------------------------------------------------*/
+/*===================== DEBUT BOARD =======================================================*/
 .main__body .board{
 
-    .img_board--un{
-        margin-top: var(--mb-100);
-        // padding-top: var(--mb-60);
-        // margin-bottom: var(--mb-50);
-        // padding-bottom: var(--mb-100);
-    }
-    .img_board--deux{
+
+    .board_img--un{
         padding-top: var(--mb-100);
         margin-bottom: var(--mb-100);
-        // border-top: 1px solid var(--color6);
     }
-    .img_board--trois{
-        // padding-top: var(--mb-100);
+    .board_img--deux{
         margin-bottom: var(--mb-100);
-        // border-top: 1px solid var(--color6);
+    }
+    .board_img--trois{
+        margin-bottom: var(--mb-100);
     }
 }
-/*------------- FIN BOARD ----------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*===================== FIN ACHETER=======================================================*/
-
-
-
-
-
+/*===================== FIN BOARD =======================================================*/
 
 
 
@@ -439,9 +341,8 @@ line-height: 1.3rem;
 .scrollup{
     position: fixed;
     right: 1rem;
-    // bottom: 5rem;
     bottom: -20%;
-    background-color: var(--color4);
+    background-color: var(--color5);
     padding: .35rem .5rem;
     border-radius: .0rem;
     z-index: var(--z-tooltip);
@@ -450,7 +351,7 @@ line-height: 1.3rem;
 }
 
 .scrollup:hover{
-    background-color: var(--color8);
+    background-color: var(--color6);
 
 }
 
@@ -467,16 +368,12 @@ line-height: 1.3rem;
 
 
 
-
-
 /*===================== DEBUT FOOTER ==========================================*/
 footer{
     width: 100%;
-    border-bottom:1px solid var(--color0) ;
+    border-bottom:1px solid var(--color5) ;
     border-top: 1px solid #efefef;
 }
-
-
 
 .footer__inner{
     display: flex;
@@ -487,7 +384,7 @@ footer{
 }
 
 .footer__inner p{
-    color:var(--color4);
+    color:var(--color5);
     padding: 0 0.625rem;
     font-weight:var(--font-normal);
     font-family: var(--body-font);
@@ -495,45 +392,24 @@ footer{
 }
 /*===================== FIN FOOTER ==========================================*/
 
+//------------ FIN VERSION MOBILE FIRST ( > 414px)------------------------------------------------------------//
 
 
 
 
-//------------ FIN VERSEION RESPONSIVE DE BASE > S MOBILE FIRST ( > 414px)---------------------------------------//
 
 
 
-/*===================== DEBUT RESPONSIVE ==========================================*/
+/*===================== DEBUT RESPONSIVE ====================================================================================*/
 
 //------------ DEBUT S ( > 414px) : small smartphones (landscape view) ---------//
-@include s{
-
-    // .main__body .intro{
-    //     padding: var(--mb-30) 0px;
-    // }
-
-}
+@include s{}
 //------------ FIN S ( > 414px) : small smartphones (landscape view) ---------//
 
 
-
-
-
-
-
-
 //------------ DEBUT SM ( > 568px) : ssmall tablets and large smartphones (landscape view) ---------//
-@include sm{
-
-}
+@include sm{}
 //------------ FIN SM ( > 568px) : small tablets and large smartphones (landscape view) ---------//
-
-
-
-    
-
-
-
 
 
 
@@ -563,52 +439,42 @@ footer{
 
 
     .main__body .introduction{
-        // border: 1px solid black;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         }
         
-        .main__body .introduction_texte{
-            // border: 1px solid blue;
-            width: 60%;
-            margin-top: 0rem;
-            margin-bottom: 0rem;
-            padding-right: 5rem;
-        }
-        .main__body .introduction_button{
-            text-align: left;
-            margin-top: 15px;
-        }
+    .main__body .introduction_texte{
+        width: 60%;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        padding-right: 5rem;
+    }
+    .main__body .introduction_button{
+        text-align: left;
+        margin-top: 15px;
+    }
 
-        .main__body .introductionSuite_texte{
-            margin-top: 2rem;
-        }
+    .main__body .introductionSuite_texte{
+        margin-top: 2rem;
+    }
         
-        .main__body .introduction_infos{
-            // border: 1px solid red;
-            width: 40%;
-        }
+    .main__body .introduction_infos{
+        width: 40%;
+    }
 
-        .main__body .introduction_infos {
-            margin: 0;
-            padding-top: 0.4rem;
-        }
+    .main__body .introduction_infos {
+        margin: 0;
+        padding-top: 0.4rem;
+    }
 
 
     .scrollup {
         right:0.5rem;
     }
 
-
 }
 //------------ FIN MD ( > 768px) : small tablets and large smartphones (landscape view) ---------//
-
-
-
-
-
-
 
 
 
@@ -620,12 +486,13 @@ footer{
         padding: 0 5rem;
     }
 
-    p{
-        font-family: var(--body-font);
-        color:var(--color4);
-        font-weight: var(--font-light);
-        font-size: var(--normal-plus);
-    }
+
+    // p{
+    //     // font-family: var(--body-font);
+    //     // color:var(--color5);
+    //     // font-weight: var(--font-light);
+    //     font-size: var(--normal-plus);
+    // }
     
 
     .main__body .introduction_texte{
@@ -644,10 +511,6 @@ footer{
     }
 
 
-    // .main__body .intro{
-    //     padding: var(--mb-100) 91px var(--mb-30);
-    // }
-
     .scrollup {
         right:.7rem;
     }
@@ -660,4 +523,5 @@ footer{
 //------------ FIN LG ( > 962px) : Tablets and small desktops ---------//
 
 
+/*===================== FIN RESPONSIVE ====================================================================================*/
 
