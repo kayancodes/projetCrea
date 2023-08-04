@@ -179,6 +179,10 @@ main {
   text-align: left;
 }
 
+.main__body .introduction_texte p {
+  margin-bottom: 1.2rem !important;
+}
+
 .main__body .introduction_button {
   text-align: left;
   margin-top: 20px;
@@ -270,7 +274,6 @@ main {
 /*===================== DEBUT FOOTER ==========================================*/
 footer {
   width: 100%;
-  border-bottom: 1px solid var(--color5);
   border-top: 1px solid #efefef;
 }
 
